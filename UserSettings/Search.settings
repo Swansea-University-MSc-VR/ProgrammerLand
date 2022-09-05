@@ -10,7 +10,7 @@ scopes = {
 	"last_search.DE949528" = "sectio"
 	"OpenInspectorPreview.DE949528" = "0"
 	"currentGroup.DE949528" = "all"
-	"last_search.DA949528" = "section1"
+	"last_search.DA949528" = "examples"
 	"OpenInspectorPreview.DA949528" = "0"
 	"currentGroup.DA949528" = "all"
 }
@@ -84,6 +84,7 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"e"
 ]
 searchItemFavorites = [
 ]
