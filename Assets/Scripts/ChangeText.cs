@@ -6,10 +6,15 @@ using TMPro;
 public class ChangeText : MonoBehaviour
 {
     public GameObject sign;
+    public string hotdogType;
+    public float price;
     // Start is called before the first frame update
     void Start()
     {
-        sign.GetComponent<TextMeshPro>().text = "some new text";
+        hotdogType = "Bratwurst";
+        price = 8.99f;
+
+        sign.GetComponent<TextMeshPro>().text = hotdogType + price.ToString();
     }
 
     // Update is called once per frame
