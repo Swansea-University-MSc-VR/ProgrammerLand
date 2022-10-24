@@ -7,11 +7,12 @@ public class OtherScript : MonoBehaviour
     public ExampleScript exampleScript1;
     public ExampleScript exampleScript2;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        exampleScript1.number = 10;
-        exampleScript2.number = 20;
+        exampleScript1.number = 99;
+        exampleScript2.number = 0;
     }
 
     // Update is called once per frame

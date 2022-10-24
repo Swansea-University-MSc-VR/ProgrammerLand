@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ExampleScript : MonoBehaviour
 {
+    
     public int number;
 
     // Start is called before the first frame update
@@ -16,5 +18,10 @@ public class ExampleScript : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void ExampleMethod()
+    {
+
     }
 }
