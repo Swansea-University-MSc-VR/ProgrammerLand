@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.Splines;
 
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
-public class Rollercoaster : MonoBehaviour, ISplineProvider
+public class RollercoasterSplineMover : MonoBehaviour, ISplineProvider
 {
 	[SerializeField]
 	RollercoasterTrack m_Track;

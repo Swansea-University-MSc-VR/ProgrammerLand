@@ -24,6 +24,8 @@ public class Weather : MonoBehaviour
         //willItRainToday = true;
         //currentLocation = "New York";
 
+        Debug.Log(currentLocation);
+        Debug.Log(temperature);
         number = a * b;
         number = number / 2;
         Debug.Log(number);
