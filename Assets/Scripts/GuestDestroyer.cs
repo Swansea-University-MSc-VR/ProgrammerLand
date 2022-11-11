@@ -1,12 +1,11 @@
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ride : MonoBehaviour
+public class GuestDestroyer : MonoBehaviour
 {
-    public int numberOfPhotosSold;
-
-
+    public Guest guestToBeDestroyed;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +19,10 @@ public class Ride : MonoBehaviour
         
     }
 
-    public void BuyPhoto(Guest guest)
+    [Button]
+    public void DestroyGuest()
     {
-        guest.cash -= 15f;
-        numberOfPhotosSold++;
-    }
 
+       Destroy(guestToBeDestroyed);
+    }
 }

@@ -9,13 +9,13 @@ public class RollerCoaster : MonoBehaviour
     {
         get
         {
-            if(ExcessiveQueueLength() == true )
+            if (ExcessiveQueueLength() == true)
             {
                 return false;
             }
             else
             {
-                 return _rideOperational;
+                return _rideOperational;
             }
         }
         set

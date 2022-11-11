@@ -18,11 +18,13 @@ public class Guest : MonoBehaviour
     private float _rubbishTime; // how long to wait untill guest drops rubbish
     private float _rubbishTimer; // a timer that keeps track when the guest should drop gue
 
+   
+
     // Start is called before the first frame update
     void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
-        _navMeshAgent.SetDestination(RandomNavmeshLocation(10f));
+        _navMeshAgent.SetDestination(RandomNavmeshLocation(100f));
 
         _rubbishTime = Random.Range(3f, 10f);
     }
@@ -32,13 +34,13 @@ public class Guest : MonoBehaviour
     {
         if(_navMeshAgent.hasPath)
         {
-            if(_navMeshAgent.remainingDistance < 0.5f)
+            if(_navMeshAgent.remainingDistance < 0.5f && !_navMeshAgent.isStopped)
             {
-                _navMeshAgent.SetDestination(RandomNavmeshLocation(10f));
+                StartCoroutine(StopAndWait());
             }
         }
 
-        if(_rubbishTimer < _rubbishTime)
+        if (_rubbishTimer < _rubbishTime)
         {
             _rubbishTimer += Time.deltaTime;
         }
@@ -50,6 +52,17 @@ public class Guest : MonoBehaviour
         }
     }
 
+    private IEnumerator StopAndWait()
+    {
+        _navMeshAgent.isStopped = true;
+
+        float waitTime = Random.Range(1f, 5f);
+        yield return new WaitForSeconds(waitTime);
+
+        _navMeshAgent.SetDestination(RandomNavmeshLocation(100f));
+
+        _navMeshAgent.isStopped = false;
+    }
 
     public Vector3 RandomNavmeshLocation(float radius)
     {
@@ -63,6 +76,4 @@ public class Guest : MonoBehaviour
         }
         return finalPosition;
     }
-
-
 }

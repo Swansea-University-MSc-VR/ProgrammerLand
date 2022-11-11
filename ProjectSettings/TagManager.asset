@@ -8,6 +8,7 @@ TagManager:
   - Man
   - Test
   - Guest
+  - Ball
   layers:
   - Default
   - TransparentFX

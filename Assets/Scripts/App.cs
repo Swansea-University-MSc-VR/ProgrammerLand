@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rubbish : MonoBehaviour
+public class App : MonoBehaviour
 {
+    public RollerCoaster rollerCoaster;
     // Start is called before the first frame update
-    IEnumerator Start()
+    void Start()
     {
-        yield return new WaitForSeconds(10f);
-        Destroy(gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-      
+        
     }
 }

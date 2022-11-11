@@ -1,12 +1,12 @@
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ride : MonoBehaviour
+public class CreateGuest : MonoBehaviour
 {
-    public int numberOfPhotosSold;
-
-
+    public Guest guestPrefab;
+    public GameObject spawnPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +20,9 @@ public class Ride : MonoBehaviour
         
     }
 
-    public void BuyPhoto(Guest guest)
+    [Button]
+    public void CreateNewGuest()
     {
-        guest.cash -= 15f;
-        numberOfPhotosSold++;
+        Instantiate(guestPrefab, spawnPosition.transform.position, Quaternion.identity);
     }
-
 }
