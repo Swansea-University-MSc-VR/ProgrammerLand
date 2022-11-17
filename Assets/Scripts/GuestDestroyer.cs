@@ -7,10 +7,12 @@ public class GuestDestroyer : MonoBehaviour
 {
     public Guest guestToBeDestroyed;
 
+    private GuestController _guestController;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _guestController = GetComponent<GuestController>();
     }
 
     // Update is called once per frame
@@ -22,7 +24,10 @@ public class GuestDestroyer : MonoBehaviour
     [Button]
     public void DestroyGuest()
     {
-
-       Destroy(guestToBeDestroyed);
+        if(_guestController.guests.Contains(guestToBeDestroyed))
+        {
+            _guestController.guests.Remove(guestToBeDestroyed);
+            Destroy(guestToBeDestroyed);
+        }    
     }
 }

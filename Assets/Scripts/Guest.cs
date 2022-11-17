@@ -6,7 +6,8 @@ using UnityEngine.AI;
 
 public class Guest : MonoBehaviour
 {
-    public string guestName;
+    public string guestFirstName;
+    public string guestSecondName;
     public float cash;
     public Ride targetRide; // ride the guest is currently trying to go on
     public bool isQueueing;

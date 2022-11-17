@@ -23,6 +23,8 @@ public class CreateGuest : MonoBehaviour
     [Button]
     public void CreateNewGuest()
     {
-        Instantiate(guestPrefab, spawnPosition.transform.position, Quaternion.identity);
+        Guest newGuest = Instantiate(guestPrefab, spawnPosition.transform.position, Quaternion.identity);
+
+        GetComponent<GuestController>().guests.Add(newGuest);
     }
 }
