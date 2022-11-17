@@ -9,6 +9,7 @@ TagManager:
   - Test
   - Guest
   - Ball
+  - Pin
   layers:
   - Default
   - TransparentFX

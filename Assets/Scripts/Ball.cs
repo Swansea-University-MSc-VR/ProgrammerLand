@@ -8,11 +8,21 @@ public class Ball : MonoBehaviour
     private Rigidbody ballRigidbody;
     private Vector3 startingPosition;
 
+    public GameObject[] pins;
+    public List<Vector3> pinStartingPositions;
+
     // Start is called before the first frame update
     void Start()
     {
         ballRigidbody = GetComponent<Rigidbody>();
         startingPosition = transform.position;
+
+        pins = GameObject.FindGameObjectsWithTag("Pin");
+
+        foreach (GameObject pin in pins)
+        {
+           pinStartingPositions.Add(pin.transform.localPosition);
+        }
     }
 
     // Update is called once per frame
@@ -36,5 +46,14 @@ public class Ball : MonoBehaviour
 
         ballRigidbody.velocity = Vector3.zero;
         ballRigidbody.angularVelocity = Vector3.zero;
+    }
+
+    [Button]
+    private void ResetCubes()
+    {
+        for (int i = 0; i < pins.Length; i++)
+        {           
+            pins[i].transform.SetLocalPositionAndRotation(pinStartingPositions[i], Quaternion.identity);
+        }
     }
 }

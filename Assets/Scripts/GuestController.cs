@@ -12,6 +12,7 @@ public class GuestController : MonoBehaviour
 
     private void Start()
     {
+        Guest guest = new Guest();
 
     }
 
