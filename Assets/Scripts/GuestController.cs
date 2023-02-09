@@ -10,12 +10,6 @@ public class GuestController : MonoBehaviour
     public Guest[] guestsByType;
     public List<Guest> guestsByTag = new List<Guest>();
 
-    private void Start()
-    {
-        Guest guest = new Guest();
-
-    }
-
     [Button]
     public void FindGuestsByType()
     {
