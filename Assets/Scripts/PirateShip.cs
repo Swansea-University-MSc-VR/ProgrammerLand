@@ -53,9 +53,9 @@ public class PirateShip : MonoBehaviour
                 timer = 0f;
 
                 //increase the rotation here
-                float rotationAmount = rightRotation.x + 10;
+                float rotationAmount = rightRotation.x - 10;
 
-                rightRotation = new Vector3(rightRotation.y, rightRotation.y, rightRotation.z);
+                rightRotation = new Vector3(rotationAmount, rightRotation.y, rightRotation.z);
             }
         }
     }
