@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:Assets/Scenes/Section10.unity.meta
 fileFormatVersion: 2
 guid: d314cb88a3b93df42aea7be5be3d41a6
 DefaultImporter:
@@ -5,3 +6,12 @@ DefaultImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+========
+fileFormatVersion: 2
+guid: 6de8732049e5641618119d373c65cd74
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>>> 6273d6bdc646811abcdcca18034063c7fbe206ff:Assets/Samples/Splines/1.0.1/Spline Examples/Scenes/1 - Loft Road/Loft Road.unity.meta
