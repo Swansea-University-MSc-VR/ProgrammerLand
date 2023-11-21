@@ -25,6 +25,14 @@ public class RollerCoaster : MonoBehaviour
     }
 
 
+    private bool _needsAService;
+    public bool NeedsAService
+    {
+        get { return _needsAService; }
+        set { _needsAService = value; }
+    }
+
+
     private bool SafetyChecksPassed()
     {
         return true;
@@ -32,7 +40,11 @@ public class RollerCoaster : MonoBehaviour
 
     private bool ExcessiveQueueLength()
     {
+        RideOperational = false;
+       
         return false;
+
+        
     }
 
 }
