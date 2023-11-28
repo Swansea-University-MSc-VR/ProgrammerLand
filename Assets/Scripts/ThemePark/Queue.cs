@@ -25,15 +25,9 @@ public class Queue : MonoBehaviour
 
     private void RemoveGuestFromQueue(Guest guest)
     {
-        if (guest != null)
-        {
+       
             guest.RandomNavmeshLocation(5f);
-        }
-        else
-        {
-            Debug.LogWarning("Guest is null, did you forget to assign it in the inspector?");
-        }
-
-        guests.Remove(guest);               
+     
+             guests.Remove(guest);               
     }
 }

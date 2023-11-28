@@ -20,10 +20,9 @@ public class AttractionController : MonoBehaviour
 
         //for (int i = 0; i < attractions.Length; i++)
         //{
-        //    Debug.Log(i);
+        //    Debug.Log(i + " ride shut down");
         //    attractions[i].IsOperational = false;
         //}
-           
 
 
 
@@ -33,17 +32,19 @@ public class AttractionController : MonoBehaviour
         //        attractions[i].IsOperational = false;
         //    }
 
-        //    foreach (var attraction in attractions)
-        //    {
-        //        attraction.IsOperational = false;
-        //    }
-
-        //int i = 0;
-        //while (i < attractions.Length)
+        //foreach (var attraction in attractions)
         //{
-        //    attractions[i].IsOperational = false;
-        //    i++;
+        //    attraction.IsOperational = false;
         //}
+
+
+
+        int i = 0;
+        while (i < attractions.Length)
+        {
+            attractions[i].IsOperational = false;
+            i++;
+        }
     }
 
 }

@@ -11,6 +11,10 @@ public class Ball : MonoBehaviour
     public GameObject[] pins;
     public List<Vector3> pinStartingPositions;
 
+    public List<GameObject> pinList;
+
+    public GameObject cubeGameObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +57,7 @@ public class Ball : MonoBehaviour
     {
         for (int i = 0; i < pins.Length; i++)
         {           
-            pins[i].transform.SetLocalPositionAndRotation(pinStartingPositions[i], Quaternion.identity);
+            pins[i].transform.SetLocalPositionAndRotation(pinStartingPositions[i], Quaternion.identity);          
         }
     }
 }
