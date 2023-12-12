@@ -16,12 +16,15 @@ public class BumperCar : MonoBehaviour
 
     private NavMeshAgent _navMeshAgent;
 
+    public HotDogGuy hotDogGuy;
 
     // Start is called before the first frame update
     void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _navMeshAgent.SetDestination(RandomNavmeshLocation(5f));
+
+
     }
 
     // Update is called once per frame

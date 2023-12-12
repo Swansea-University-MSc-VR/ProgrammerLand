@@ -11,7 +11,7 @@ public class Queue : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        Debug.Log("This script keeps track of the number of guests in a queue for a ride") ;
+      //  Debug.Log("This script keeps track of the number of guests in a queue for a ride");
 
         AddGuestToQueue(guest);
 
@@ -20,14 +20,23 @@ public class Queue : MonoBehaviour
 
     private void AddGuestToQueue(Guest guest)
     {
+      //  Debug.Break();
         guests.Add(guest);
     }
 
     private void RemoveGuestFromQueue(Guest guest)
     {
-       
+        if (guest != null)
+        {
             guest.RandomNavmeshLocation(5f);
-     
-             guests.Remove(guest);               
+
+            guests.Remove(guest);
+        }
+        else
+        {
+            
+            Debug.LogWarning("you tried to remove a guest that is null");
+        }
     }
 }
+

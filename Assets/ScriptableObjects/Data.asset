@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b545355bb5a77594991f437d79042772, type: 3}
   m_Name: Data
   m_EditorClassIdentifier: 
-  prefabName: 
-  numberOfPrefabsToCreate: 0
-  spawnPoints: []
+  exampleString: 'Test '
+  exampleInt: 550
+  examplePositions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
