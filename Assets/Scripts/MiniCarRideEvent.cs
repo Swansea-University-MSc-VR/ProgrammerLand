@@ -6,8 +6,10 @@ public class MiniCarRideEvent : MonoBehaviour
     // Unity Event to be invoked when a player enters the trigger zone
     public UnityEvent onPlayerEnter;
 
+
     public delegate void PhotoTakenHandler();
     public static event PhotoTakenHandler OnPhotoTaken;
+    public static event PhotoTakenHandler OnPhotoError;
 
 
     private void OnTriggerEnter(Collider other)
@@ -22,6 +24,8 @@ public class MiniCarRideEvent : MonoBehaviour
 
             // Invoke the PhotoTaken event
             OnPhotoTaken?.Invoke();
+
+            OnPhotoError?.Invoke();
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -18,6 +19,13 @@ public class PhotoBooth : MonoBehaviour
         }
 
         MiniCarRideEvent.OnPhotoTaken += IncrementPhotoCounter;
+
+        MiniCarRideEvent.OnPhotoError += PhotoError;
+    }
+
+    private void PhotoError()
+    {
+        Debug.Log("Photo Error");
     }
 
     public void TakePhoto()
